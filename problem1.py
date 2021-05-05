@@ -1,5 +1,6 @@
 from mrjob.job import MRJob
 from mrjob.step import MRStep
+import mrjob
 import statistics
 import numpy as np
 import math
