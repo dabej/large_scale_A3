@@ -71,15 +71,13 @@ class Summary(MRJob):
             "max": max_val,
             "counts": histogram_counts
         }
-        yield("summary", summary)
+        yield "summary", summary
 
 
 """the below 2 lines are ensuring the execution of mrjob, the program will not
 execute without them"""
 if __name__ == '__main__':
-    # for c in [1, 2, 4]:
     t0 = time.time()
-    # args=['--num-cores', str(c)]
     Summary().run()
     t1 = time.time()
     print("duration: ", t1-t0)
